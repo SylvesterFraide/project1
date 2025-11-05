@@ -1,12 +1,25 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./component/Navbar";
+import Home from "./Pages/Home";
+import Collection from "./Pages/Collection";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-medium text-gray-500 text-center py-4">Hello world!</h1>
-      <p className="px-4 sm:px-[5vw] md:px-[6vw] lg:px-[7vw]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum ut nihil mollitia tempore necessitatibus, minus odio harum! Quas laboriosam architecto consequatur commodi aliquam nemo consequuntur vel quos? Fugit, illo dolorum!</p>
-    </>
+    <div className="px-4 sm:px-[5vw] md:px-[6vw] lg:px-[7vw]">
+      {" "}
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="collection" element={<Collection />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
-
 export default App;
