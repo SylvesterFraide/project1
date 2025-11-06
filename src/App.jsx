@@ -8,7 +8,7 @@ import Contact from "./Pages/Contact";
 
 function App() {
   return (
-    <div className="px-4 sm:px-[5vw] md:px-[6vw] lg:px-[7vw]">
+    <div>
       {" "}
       <BrowserRouter>
         <Navbar />

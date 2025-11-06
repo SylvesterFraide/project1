@@ -1,10 +1,11 @@
-import React from 'react'
-import Navbar from '../component/Navbar'
-
+import React from 'react';
+import HeroSection from '../component/HeroSection';
 
 const Home = () => {
   return (
-    <div className=""></div>
+    <div className="">
+      <HeroSection />
+    </div>
   )
 }
 

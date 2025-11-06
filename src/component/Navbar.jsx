@@ -7,7 +7,7 @@ const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState("Home");
 
   return (
-    <div className="text-gray-900 flex items-center justify-between py-4">
+    <div className="text-gray-900 flex items-center justify-between py-4 px-6">
       <h2 className="text-2xl font-semibold">Logo</h2>
 
       <div className="flex gap-4">
@@ -50,7 +50,7 @@ const Navbar = () => {
         <NavLink to="/cart">
           <ShoppingBasketIcon />
         </NavLink>
-        <NavLink to="/">Login</NavLink>
+        <NavLink to="/">Sign In</NavLink>
       </div>
     </div>
   );
