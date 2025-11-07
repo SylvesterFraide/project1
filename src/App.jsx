@@ -11,7 +11,14 @@ function App() {
     <div>
       {" "}
       <BrowserRouter>
-        <Navbar />
+        <Navbar
+          Logo="Logo"
+          Home="Home"
+          Collection="Collection"
+          About="About"
+          Contact="Contact"
+          SignIn="Sign In"
+        />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="collection" element={<Collection />} />
