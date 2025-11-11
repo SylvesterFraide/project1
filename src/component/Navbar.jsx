@@ -7,10 +7,10 @@ const Navbar = ({Logo, Home, Collection, About, Contact, SignIn}) => {
   const [activeMenu, setActiveMenu] = useState("Home");
 
   return (
-    <div className="flex items-center justify-between py-4 px-6">
+    <div className="flex items-center justify-between py-4 px-6 h-[10vh]">
       <h2 className="text-2xl font-semibold">{Logo}</h2>
 
-      <div className="flex space-x-8 font-semibold text-gray-500">
+      <div className="hidden sm:flex gap-8 font-semibold text-gray-500">
         <NavLink to="/" onClick={() => setActiveMenu("Home")}>
           <p>{Home}</p>
           <hr
@@ -47,7 +47,7 @@ const Navbar = ({Logo, Home, Collection, About, Contact, SignIn}) => {
         </NavLink>
       </div>
 
-      <div className="flex items-center space-x-4 text-gray-500 font-semibold">
+      <div className="flex items-center gap-4 text-gray-500 font-semibold">
         <NavLink to="/search">
           <SearchIcon />
         </NavLink>

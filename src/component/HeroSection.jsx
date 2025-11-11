@@ -21,14 +21,14 @@ const HeroSection = ({ header, par, btn }) => {
   }, [nextSlide]);
 
   return (
-    <div
-      className="h-[89.5vh] bg-no-repeat bg-center bg-cover flex items-center"
+    <motion.div
+      className="h-[90vh] bg-no-repeat bg-center bg-cover flex items-center"
       style={{ backgroundImage: `url(${heroImages[slideIndex].image})` }}
     >
       <div className="ml-[5rem] text-gray-800">
         <h1 className="text-4xl font-bold ">{header}</h1>
         <p className="py-2 text-lg font-semibold">{par}</p>
-        <motion.button animate={{ opacity: 5 }} className=" text-gray-800 font-semibold bg-white py-2 px-4 rounded-md mt-3">
+        <motion.button animate={{ scale: 1.1, y: 2 }} className=" text-gray-800 font-semibold bg-white py-2 px-4 rounded-md mt-3">
           {btn}
         </motion.button>
         <div className=" mt-10 px-1 flex  gap-2">
@@ -45,7 +45,7 @@ const HeroSection = ({ header, par, btn }) => {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
