@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSection from "../component/HeroSection";
+import Latest_Collection from "../component/Latest_Collection";
 
 const Home = () => {
   return (
@@ -9,7 +10,9 @@ const Home = () => {
         par="Celebrate the joy and warmth of the season with us."
         btn="Shop Now"
       />
+      <Latest_Collection />
     </div>
+
   );
 };
 

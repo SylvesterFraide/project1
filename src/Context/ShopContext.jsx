@@ -1,21 +1,20 @@
 import { createContext } from "react";
-import { product } from "../component/Data";
-import { heroImages } from "../component/Data";
+import { product } from "../component/Product";
 
 export const ShopContext = createContext();
+const currency = '$';
 
-const ShopContextProvider = ( props ) => {
-
-    const value = {
-        product,
-        heroImages
-    };
+const ShopContextProvider = (props) => {
+  const contextValue = {
+    product,
+    currency
+  }
 
   return (
-    <ShopContext.Provider value={{ value }}>
+    <ShopContext.Provider value={contextValue}>
       {props.children}
     </ShopContext.Provider>
-  );
-};
+  )
+}
 
 export default ShopContextProvider;

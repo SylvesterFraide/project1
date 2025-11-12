@@ -10,7 +10,7 @@ const Navbar = ({Logo, Home, Collection, About, Contact, SignIn}) => {
     <div className="flex items-center justify-between py-4 px-6 h-[10vh]">
       <h2 className="text-2xl font-semibold">{Logo}</h2>
 
-      <div className="hidden sm:flex gap-8 font-semibold text-gray-500">
+      <div className="hidden sm:flex gap-5 font-semibold text-gray-500">
         <NavLink to="/" onClick={() => setActiveMenu("Home")}>
           <p>{Home}</p>
           <hr
