@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import Title from "./Title";
 import { ShopContext } from "../Context/ShopContext";
+import ProductItem from "./ProductItem";
 
 const Latest_Collection = () => {
   const { product, currency } = useContext(ShopContext);
@@ -22,12 +23,15 @@ const Latest_Collection = () => {
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6">
         {sliceProduct.map((item) => (
-          <div key={item.id} className="">
-            <img src={item.image[0]} alt={item.name} className="w-60 object-cover mb-2" />
-            <h3 className="font-bold">{item.name}</h3>
-            <p>{item.description}</p>
-            <p className="font-bold">{currency}{item.price}</p>
-          </div>
+          <ProductItem
+            key={item.id}
+            image={item.image[0]}
+            name={item.name}
+            description={item.description}
+            price={item.price}
+            currency={currency}
+            id={item.id}
+          />
         ))}
       </div>
     </div>
