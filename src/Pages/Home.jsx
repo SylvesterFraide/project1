@@ -1,6 +1,8 @@
 import React from "react";
 import HeroSection from "../component/HeroSection";
 import Latest_Collection from "../component/Latest_Collection";
+import Best_Seller from "../component/Best_Seller";
+
 
 const Home = () => {
   return (
@@ -11,6 +13,7 @@ const Home = () => {
         btn="Shop Now"
       />
       <Latest_Collection />
+      <Best_Seller />
     </div>
 
   );
