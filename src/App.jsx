@@ -5,11 +5,11 @@ import Home from "./Pages/Home";
 import Collection from "./Pages/Collection";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Product from "./Pages/Product";
 
 function App() {
   return (
     <div>
-      {" "}
       <BrowserRouter>
         <Navbar
           Logo="Logo"
@@ -24,6 +24,7 @@ function App() {
           <Route path="collection" element={<Collection />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="product/:id" element={<Product />} />
         </Routes>
       </BrowserRouter>
     </div>

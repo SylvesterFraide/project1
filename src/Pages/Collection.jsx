@@ -50,7 +50,7 @@ const Collection = () => {
   }, [category, subcategory]);
 
   return (
-    <div className="flex justify-between flex-col sm:flex-row gap-2 sm:gap-10 mt-6 mx-10 bg-gray-100 shadow-xl">
+    <div className="flex justify-between flex-col sm:flex-row gap-2 sm:gap-10 mt-6 mx-10 bg-gray-100 shadow-xl border border-gray-300 ">
       <div className="min-w-60">
         <Title text2={"FILTERS"} />
         <div className="border border-gray-300">
@@ -109,9 +109,9 @@ const Collection = () => {
           </div>
         </div>
       </div>
-      <div className="border flex-1">
+      <div className="bg-white flex-1">
         <Title text2={"PRODUCTS"} />
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 p-2">
           {filteredProducts.map((item) => (
             <ProductItem
               key={item.id}
