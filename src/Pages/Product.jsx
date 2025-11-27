@@ -2,11 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../Context/ShopContext";
 import GradeIcon from "@mui/icons-material/Grade";
-import { button } from "framer-motion/client";
+// import { button } from "framer-motion/client";
 
 const Product = () => {
   const { id } = useParams();
-  const { product, currency } = useContext(ShopContext);
+  const { product, currency, addToCart } = useContext(ShopContext);
   const [productDetails, setProductDetails] = useState(false);
   const [image, setImage] = useState(null);
   const [selectedSize, setSelectedSize] = useState("");
@@ -91,6 +91,13 @@ const Product = () => {
                 </button>
               ))}
             </div>
+
+            <button
+              onClick={() => addToCart(productDetails.id, selectedSize)}
+              className="bg-yellow-500 text-white py-2 px-4 rounded"
+            >
+              Add to Cart
+            </button>
           </div>
         </div>
       </div>
